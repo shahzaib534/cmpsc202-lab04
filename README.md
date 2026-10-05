@@ -6,6 +6,8 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
 **Topics:** asymptotic analysis, data structures, empirical comparison of algorithms, pseudocode, greedy algorithms. 
 
+Shahzaib Ellahi.
+
 ## Asymptotic Analysis
 
 1. Use the rules from lecture 07 to prove that $T(n) = 5 \log n + 7n$ is $\mathcal{O}(n)$.
@@ -41,25 +43,25 @@ This lab reviews the foundational concepts of algorithms and data structures tha
 
 **Answer**: Stack
 
-**Justification**:
+**Justification**: The robot needs to return to the most recent intersection first. A stack follows “last in, first out,” which is exactly how backtracking works.
 
 2. A server receives a massive influx of data packets from a streaming video application. To prevent the video from skipping or playing out of order on the user's end, the server must process and forward these packets in the exact sequence they were received.
 
 **Answer**: Queue
 
-**Justification**:
+**Justification**: the server needs to handle packets in the same order they arrive. A queue follows “first in, first out,” so the earliest packet is processed first.
 
 3. An atmospheric monitoring system reads temperature data from 10,000 sequentially numbered sensors (IDs 0 through 9999). Throughout the day, the system needs to constantly update and read the current temperature of randomly selected sensors based on their ID number to build localized weather maps.
 
 **Answer**: Array
 
-**Justification**:
+**Justification**: The sensors have numbered IDs, and the system needs quick access to any sensor’s temperature using its ID. An array lets you directly access a value by its index.
 
 4. You are building a lightweight syntax checker for a code editor. Its sole job is to scan a document and ensure that every opened parenthesis `(`, bracket `[`, and brace `{` is matched with its corresponding closing character in the correct nested order.
 
 **Answer**: Stack
 
-**Justification**:
+**Justification**: The checker needs to match closing symbols with the most recently opened symbol. A stack keeps track of symbols in the correct nested order.
 
 ## Empirical Comparison of Algorithms
 
@@ -110,6 +112,8 @@ for i = 1 to N do
 
 Write a closed-form expression for the number of times `do_work()` is called in terms of $N$.
 
+Ans : N(N+1)/2
+
 2. Analyze the exact number of times the `do_work()` function is called in the following pseudocode, assuming $N \ge 1$.
 
 ```
@@ -124,7 +128,7 @@ If $N=16$, how many times is `do_work()` called?
 
 **Answer**: 31
 
-**Justification**:
+**Justification**: The first loop runs 16 times, then the value of i is cut in half each time, so it runs 8 times, then 4, then 2, and finally 1.
 
 ## Greedy Algorithms
 
